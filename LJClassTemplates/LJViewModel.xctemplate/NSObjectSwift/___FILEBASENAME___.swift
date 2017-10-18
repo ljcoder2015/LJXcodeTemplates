@@ -12,31 +12,32 @@ import UIKit
     import RxSwift
     import RxCocoa
 #endif
-import Alamofire
-import HandyJSON
+import Moya
 
-class ___FILEBASENAMEASIDENTIFIER___ {
+class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
     // MARK: output
-    
-    // MAKR: API
-    
+    lazy var listDriver: Driver<LJResponse<[LJProductListModel]>> = self.listVariable.asDriver()
+    lazy var moreIsVariable: Driver<Bool> = self.moreVariable.asDriver()
     // MARK: input
     
     // MARK: property
+    fileprivate var listVariable = Variable<LJResponse<[LJProductListModel]>>(LJResponse.Failed(LJError.EmptyError))
+    fileprivate var moreVariable = Variable<Bool>(false)
     
-    // MAKR: init
-    init() { }
-    
-}
-
-// MAKR: Data Request
-extension ___FILEBASENAMEASIDENTIFIER___: LJRequest, LJRequestCallBack {
-    
-    func route(_ api: LJBaseAPI) -> String {
-        return ""
+    func getList(id: Int) {
+        LJShopProvider.request(LJShopAPI.getList(id: id))
+            .asObservable()
+            .mapList(LJProductListModel.self)
+            .subscribe(onNext: { (result) in
+                self.listVariable.value = result
+                if result.data?.count ?? 0 > 0 {
+                    self.moreVariable.value = true
+                }
+                else {
+                    self.moreVariable.value = false
+                }
+            })
+            .disposed(by: disposeBag)
     }
-
-    func callSuccess(_ api: LJBaseAPI, result: LJResponse) {
-
-    }
+    
 }
