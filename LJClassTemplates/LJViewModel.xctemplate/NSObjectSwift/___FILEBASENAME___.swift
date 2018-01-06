@@ -16,26 +16,20 @@ import Moya
 
 class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
     // MARK: output
-    lazy var listDriver: Driver<LJResponse<[LJProductListModel]>> = self.listVariable.asDriver()
+    lazy var listDriver: Driver<LJResponse<<#Model#>>> = self.listVariable.asDriver()
     lazy var moreIsVariable: Driver<Bool> = self.moreVariable.asDriver()
     // MARK: input
     
     // MARK: property
-    fileprivate var listVariable = Variable<LJResponse<[LJProductListModel]>>(LJResponse.Failed(LJError.EmptyError))
+    fileprivate var listVariable = Variable<LJResponse<<#Model#>>>(LJResponse.Failed(LJError.EmptyError))
     fileprivate var moreVariable = Variable<Bool>(false)
     
     func getList(id: Int) {
-        LJShopProvider.request(LJShopAPI.getList(id: id))
+        <#Provider#>.request(<#API#>)
             .asObservable()
-            .mapList(LJProductListModel.self)
+            .mapList(<#Model#>.self)
             .subscribe(onNext: { (result) in
                 self.listVariable.value = result
-                if result.data?.count ?? 0 > 0 {
-                    self.moreVariable.value = true
-                }
-                else {
-                    self.moreVariable.value = false
-                }
             })
             .disposed(by: disposeBag)
     }

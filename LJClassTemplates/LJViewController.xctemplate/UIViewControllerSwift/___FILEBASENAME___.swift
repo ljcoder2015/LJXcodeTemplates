@@ -3,38 +3,44 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //  GitHub: https://github.com/ljcoder2015
 //
 
 import UIKit
-#if !RX_NO_MODULE
-    import RxSwift
-    import RxCocoa
-#endif
+import RxSwift
+import RxCocoa
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
 
     // MARK: UI
     
     // MARK: Property
-    
-    // MARK: Life Cycle
+
+}
+
+// MARK: Life Cycle
+extension ___FILEBASENAMEASIDENTIFIER___ {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = <#title#>
         
         setupUI()
+        
+        bindViewModel()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-    // MARK: bindViewModel
-    override func bindViewModel() {
+// MARK: bindViewModel
+extension ___FILEBASENAMEASIDENTIFIER___ {
+    
+    func bindViewModel() {
         
     }
 }
