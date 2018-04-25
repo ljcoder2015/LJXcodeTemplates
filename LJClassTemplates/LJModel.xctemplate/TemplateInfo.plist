@@ -54,7 +54,7 @@
 			<key>Suffixes</key>
 			<dict>
 				<key>NSObject</key>
-				<string>ViewModel</string>
+				<string>Model</string>
 			</dict>
 		</dict>
 		<dict>

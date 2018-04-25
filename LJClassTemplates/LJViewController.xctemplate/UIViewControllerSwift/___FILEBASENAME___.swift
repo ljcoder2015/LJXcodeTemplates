@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
+class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewController {
 
     // MARK: UI
     

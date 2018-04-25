@@ -17,15 +17,18 @@ import Moya
 class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
     // MARK: output
     lazy var listDriver: Driver<LJResponse<<#Model#>>> = self.listVariable.asDriver()
-    lazy var moreIsVariable: Driver<Bool> = self.moreVariable.asDriver()
-    // MARK: input
-    
-    // MARK: property
+    lazy var moreDriver: Driver<Bool> = self.moreVariable.asDriver()
+
+    // MARK: Variable
     fileprivate var listVariable = Variable<LJResponse<<#Model#>>>(LJResponse.Failed(LJError.EmptyError))
     fileprivate var moreVariable = Variable<Bool>(false)
     
-    func getList(id: Int) {
-        <#Provider#>.request(<#API#>)
+}
+
+// MARK: Action
+extension ___FILEBASENAMEASIDENTIFIER___ {
+    func fetchList() {
+        <#Provider#>.rx.request(<#API#>)
             .asObservable()
             .mapList(<#Model#>.self)
             .subscribe(onNext: { (result) in
@@ -33,5 +36,4 @@ class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
             })
             .disposed(by: disposeBag)
     }
-    
 }
