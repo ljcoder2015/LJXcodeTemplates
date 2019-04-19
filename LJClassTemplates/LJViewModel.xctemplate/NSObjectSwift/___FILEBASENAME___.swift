@@ -30,9 +30,10 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
     func fetchList() {
         <#Provider#>.rx.request(<#API#>)
             .asObservable()
-            .mapList(<#Model#>.self)
+            .mapObject(<#Model#>.self)
             .subscribe(onNext: { (result) in
                 self.listVariable.value = result
+                self.moreVariable.value = result.data?.currentPage ?? 0 < result.data?.lastPage ?? 0
             })
             .disposed(by: disposeBag)
     }
