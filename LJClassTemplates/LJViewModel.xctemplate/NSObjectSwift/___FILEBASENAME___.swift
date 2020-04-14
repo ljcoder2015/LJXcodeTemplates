@@ -21,7 +21,7 @@ class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
 
     // MARK: Variable
     fileprivate var listPublishRelay = PublishRelay<LJResponse<<#Model#>>>()
-    fileprivate var morePublishRelay = PublishRelay<Bool>(false)
+    fileprivate var morePublishRelay = PublishRelay<Bool>()
     
 }
 
