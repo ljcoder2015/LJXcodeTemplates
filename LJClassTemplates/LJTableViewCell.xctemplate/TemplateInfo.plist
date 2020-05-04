@@ -44,7 +44,7 @@
 			<key>Type</key>
 			<string>class</string>
 			<key>Default</key>
-			<string>NSObject</string>
+			<string>UITableViewCell</string>
 			<key>FallbackHeader</key>
 			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
@@ -53,7 +53,7 @@
 			</array>
 			<key>Suffixes</key>
 			<dict>
-				<key>NSObject</key>
+				<key>UITableViewCell</key>
 				<string>TableViewCell</string>
 			</dict>
 		</dict>
