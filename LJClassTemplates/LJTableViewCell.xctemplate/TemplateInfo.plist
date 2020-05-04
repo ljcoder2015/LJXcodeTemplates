@@ -49,12 +49,12 @@
 			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
 			<array>
-				<string>NSObject</string>
+				<string>UITableViewCell</string>
 			</array>
 			<key>Suffixes</key>
 			<dict>
 				<key>NSObject</key>
-				<string>ViewModel</string>
+				<string>TableViewCell</string>
 			</dict>
 		</dict>
 		<dict>
@@ -95,7 +95,7 @@
 			<key>Type</key>
 			<string>popup</string>
 			<key>Default</key>
-			<string>Objective-C</string>
+			<string>Swift</string>
 			<key>Values</key>
 			<array>
 				<string>Swift</string>
