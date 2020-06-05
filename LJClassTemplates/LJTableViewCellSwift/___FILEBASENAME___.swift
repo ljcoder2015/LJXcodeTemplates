@@ -1,19 +1,11 @@
-//
-//  ___FILENAME___
-//  ___PROJECTNAME___
-//
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
-//  GitHub: https://github.com/ljcoder2015
-//
+//___FILEHEADER___
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___: UITableViewCell {
+class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
 
-    // UI
+    // MARK: UI
 
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -24,9 +16,13 @@ class ___FILEBASENAMEASIDENTIFIER___: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setup(_ model: <#model#>) {
+        
+    }
 }
 
 extension ___FILEBASENAMEASIDENTIFIER___ {
+    
     fileprivate func setupUI() {
         
     }
