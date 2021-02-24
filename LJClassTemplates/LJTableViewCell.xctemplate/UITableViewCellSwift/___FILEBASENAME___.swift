@@ -1,8 +1,15 @@
-//___FILEHEADER___
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
+//  GitHub: https://github.com/ljcoder2015
+//
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
+class ___FILEBASENAMEASIDENTIFIER___: UITableViewCell {
 
     // MARK: UI
 

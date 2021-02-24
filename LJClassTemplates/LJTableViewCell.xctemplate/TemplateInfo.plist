@@ -44,7 +44,7 @@
 			<key>Type</key>
 			<string>class</string>
 			<key>Default</key>
-			<string>UITableViewCell</string>
+			<string>NSObject</string>
 			<key>FallbackHeader</key>
 			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
@@ -114,7 +114,7 @@
 			<key>Type</key>
 			<string>popup</string>
 			<key>Default</key>
-			<string>Swift</string>
+			<string>Objective-C</string>
 			<key>Values</key>
 			<array>
 				<string>Swift</string>
