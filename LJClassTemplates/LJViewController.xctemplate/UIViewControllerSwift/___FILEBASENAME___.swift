@@ -40,7 +40,7 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
 // MARK: bindViewModel
 extension ___FILEBASENAMEASIDENTIFIER___ {
     
-    func bindViewModel() {
+    private func bindViewModel() {
         
     }
 }
