@@ -48,7 +48,7 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
 // MARK: SetupUI
 extension ___FILEBASENAMEASIDENTIFIER___ {
     
-    fileprivate func setupUI() {
+    private func setupUI() {
         // addSubView
         
         // layout
