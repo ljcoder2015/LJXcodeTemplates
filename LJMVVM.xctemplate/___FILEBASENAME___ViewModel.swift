@@ -13,11 +13,14 @@ import RxCocoa
 import Moya
 
 class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewModel {
-    // MARK: output
+    // MARK: Output
+    private(set) var list: [<#Model#>] = []
+    private var page: Int = 1
+    // MARK: Driver
     lazy var listDriver: Driver<[<#Model#>]> = self.listPublishRelay.asDriver(onErrorJustReturn:[])
     lazy var moreDriver: Driver<Bool> = self.morePublishRelay.asDriver(onErrorJustReturn: false)
 
-    // MARK: Variable
+    // MARK: PublishRelay
     private var listPublishRelay = PublishRelay<[<#Model#>]>()
     private var morePublishRelay = PublishRelay<Bool>()
     
@@ -28,7 +31,7 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
     func fetchList() {
         Api.request(<#API#>)
             .asObservable()
-            .mapObject(<#Model#>.self)
+            .mapObject(LJListModel<<#Model#>>.self)
             .filterHUDError()
             .subscribe(onNext: { (result) in
                 self.listPublishRelay.accept(result)

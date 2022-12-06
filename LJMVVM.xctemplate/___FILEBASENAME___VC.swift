@@ -15,8 +15,13 @@ class ___FILEBASENAMEASIDENTIFIER___: LJBaseViewController {
 
     // MARK: UI
     
-    // MARK: Property
-
+    // MARK: Input
+    
+    // MARK: Output
+    
+    // MARK: Properties
+    
+    // MARK: Init
 }
 
 // MARK: Life Cycle
@@ -29,11 +34,6 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
         setupUI()
         
         bindViewModel()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
